@@ -21,15 +21,17 @@
         android:layout_marginTop="39dp"
         android:text="@string/tv_text"
         android:textColor="#000000"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:textSize="20sp"/>
 
     <ImageView
         android:id="@+id/image_8ball"
+        android:contentDescription="@string/description_eightBallImage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/text_8ball"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="35dp"
+        android:layout_marginTop="40dp"
         app:srcCompat="@drawable/ball1" />
 
     <Button
@@ -38,7 +40,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="50dp"
+        android:layout_marginBottom="45dp"
         android:background="#3F51B5"
         android:text="@string/button_text"
         android:textColor="#FFFFFF"
