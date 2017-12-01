@@ -10,32 +10,29 @@ import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+  @Override
+  protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.activity_main);
 
-        Button askButton = findViewById(R.id.button_8ball);
+    Button askButton = findViewById(R.id.button_8ball);
 
-        final ImageView ballDisplay = findViewById(R.id.image_8ball);
+    final ImageView ballDisplay = findViewById(R.id.image_8ball);
 
-        final int[] ballArray = {
-            R.drawable.ball1,
-            R.drawable.ball2,
-            R.drawable.ball3,
-            R.drawable.ball4,
-            R.drawable.ball5,
-        };
+    final int[] ballArray = {
+        R.drawable.ball1,
+        R.drawable.ball2,
+        R.drawable.ball3,
+        R.drawable.ball4,
+        R.drawable.ball5,
+    };
 
-        askButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Random randomNumGen = new Random();
-                int result = randomNumGen.nextInt(5);
-                ballDisplay.setImageResource(ballArray[result]);
-            }
-        });
+    askButton.setOnClickListener((v) -> {
+      Random randomNumGen = new Random();
+      int result = randomNumGen.nextInt(5);
+      ballDisplay.setImageResource(ballArray[result]);
+    });
 
 
-    }
+  }
 }
